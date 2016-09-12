@@ -1,0 +1,6 @@
+#!/bin/bash
+javac BreakoutApp.java
+javac BallControl.java
+javac Ball.java
+javac SimpleBall.java
+java BreakoutApp
