@@ -93,8 +93,9 @@ public class Ball extends JPanel {
   //it will get checked for the other ball in the for loop
   public void check_collision(Graphics g){
 	for(SimpleBall item : Balls){
-	  for(SimpleBall other_item : Balls){
+	  //for(SimpleBall other_item : Balls){
 	    //check for (x+radius) for within specified range
+      SimpleBall other_item = ball1;
 	    if((item.get_x()+item.get_radius())
 	       <= (other_item.get_x()+other_item.get_radius())
 	    && (item.get_x()+item.get_radius())
@@ -107,8 +108,9 @@ public class Ball extends JPanel {
 		 //if different balls
 		 if(other_item != item){
 		     reflect(g, item, other_item);
+         destroy_new_ball();
     	      }
-    	  }
+    	  //}
        }
     }
 
@@ -157,10 +159,6 @@ public class Ball extends JPanel {
     //check for collision and bounce the balls
     check_collision(g);
   }
-
-
-
-
 
   //suspend used to switch timer on and off
   public void suspend() {

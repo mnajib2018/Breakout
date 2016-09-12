@@ -18,9 +18,9 @@ public class SimpleBall{
 
     //constructor
     public SimpleBall(){
-	     x =(int)(Math.random()*398)+1;
-       y = 0;
-       radius = (int)(Math.random()*20)+1;
+	     x = 25;
+       y = 10;
+       radius = 5+1;
        dx = 2;
        dy = 2;
 	     Red = (int)(Math.random()*256);
